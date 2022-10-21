@@ -1,0 +1,31 @@
+<h1 id="texto1">{{ section.settings.text1 }}</h1>
+
+{% style %}
+    #texto1 {
+        font-size: {{ section.settings.fontsize | append: "rem" }};
+    }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "section1",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "texto 1"
+    },
+    {
+      "type": "number",
+      "id": "fontsize",
+      "label": "Font size changer",
+      "default": 3
+    }
+  ],
+  "presets": [
+    {
+      "name": "john"
+    }
+  ]
+}
+{% endschema %}
